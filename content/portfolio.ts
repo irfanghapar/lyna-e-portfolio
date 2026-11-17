@@ -12,18 +12,62 @@ export const site = {
   title: "Lyn's learning",
   owner: "Norazlyna",
   role: "Future Biology teacher",
-  programme: "Bachelor of Education (Hons.) Biology",
+  programme: "Bachelor of Science Education (Hons.) Biology",
   university: "Universiti Teknologi MARA (UiTM), Selangor Branch, Puncak Alam Campus",
   course: "EDU456 Innovative Technologies for Teaching and Learning",
   courseCode: "EDU456",
   classGroup: "ED247",
-  photo: "",
+  photo: "/about/lyna.jpg",
   welcome:
     "This e-portfolio looks at five digital platforms I can use to teach Biology. For each one I explain what it does, weigh up how well it supports learning, show how to set it up, and plan a Biology lesson around it.",
   about: [
-    "My name is Norazlyna and I am studying for a Bachelor of Education (Hons.) in Biology at UiTM Puncak Alam. I am training to become a secondary school Biology teacher.",
+    "My name is Norazlyna and I am studying for a Bachelor of Science Education (Hons.) Biology at UiTM Puncak Alam. As a future Biology educator, I aim to integrate innovative digital technologies into teaching to create engaging, interactive and meaningful learning experiences for students.",
     "Biology is full of things students cannot easily see: organelles, enzymes, the stages of cell division. I am interested in digital tools because they give me more ways to make those ideas visible, to check what students understand, and to keep a class of teenagers involved.",
-    "I built this e-portfolio for EDU456. I chose platforms that do different jobs in a lesson, so that together they cover classroom management, vocabulary, practice, revision and group discussion.",
+    "I built this e-portfolio for EDU456. I chose platforms that do different jobs in a lesson, so that together they cover classroom management, vocabulary, practice, revision and seeing structures in 3D.",
+  ],
+  education: [
+    {
+      stage: "Primary education",
+      years: "2010 to 2015",
+      place: "SK St. Monica",
+      detail: "I completed my primary education at SK St. Monica, where I studied from Year 1 to Year 6.",
+      image: "/education/sk-st-monica.jpg",
+      alt: "The SK St. Monica school building.",
+      width: 960,
+      height: 640,
+    },
+    {
+      stage: "Secondary education",
+      years: "2016 to 2021",
+      place: "SM Sung Siew",
+      detail:
+        "I continued my secondary education at SM Sung Siew as a Science Stream student. During this period I completed the Pentaksiran Tingkatan 3 (PT3) examination in 2018 and the Sijil Pelajaran Malaysia (SPM) examination in 2021, taking nine subjects.",
+      image: "/education/sm-sung-siew.jpg",
+      alt: "The front gate of SM Sung Siew in Sandakan.",
+      width: 960,
+      height: 640,
+    },
+    {
+      stage: "Diploma",
+      years: "2022 to 2025",
+      place: "Universiti Pendidikan Sultan Idris (UPSI)",
+      detail:
+        "I was awarded a Diploma in Science from Universiti Pendidikan Sultan Idris after completing five semesters of academic study and one semester of industrial internship.",
+      image: "/education/upsi.jpg",
+      alt: "An aerial view of the entrance arch at Universiti Pendidikan Sultan Idris.",
+      width: 960,
+      height: 592,
+    },
+    {
+      stage: "Bachelor's degree",
+      years: "2025 to 2029",
+      place: "Universiti Teknologi MARA (UiTM), Puncak Alam Campus",
+      detail: "I am currently pursuing a Bachelor of Science Education (Hons.) Biology at UiTM Selangor, Puncak Alam Campus.",
+      image: "/education/uitm.jpg",
+      alt: "The entrance sign of Universiti Teknologi MARA, Puncak Alam Campus.",
+      width: 678,
+      height: 452,
+    },
   ],
 };
 
@@ -35,7 +79,7 @@ export type Entry = {
   tagline: string;
   job: string;
   accent: string;
-  icon: "badge" | "cards" | "puzzle" | "map" | "room";
+  icon: "badge" | "cards" | "puzzle" | "map" | "cube";
   topic: string;
   videoUrl: string;
   facts: { label: string; value: string }[];
@@ -56,6 +100,11 @@ export type Entry = {
     access: Step[];
     create: Step[];
     classroom: Step[];
+  };
+  showcase?: {
+    title: string;
+    intro: string;
+    images: { src: string; alt: string; caption: string; width: number; height: number }[];
   };
   analysis: {
     why: string[];
@@ -904,215 +953,229 @@ export const entries: Entry[] = [
     ],
   },
   {
-    slug: "gather-town",
-    name: "Gather Town",
-    tagline: "A virtual room where students walk up to each other to talk",
-    job: "Discussing in groups online",
+    slug: "assemblr-edu",
+    name: "Assemblr EDU",
+    tagline: "3D and augmented reality models students can turn, zoom and place on their desks",
+    job: "Seeing structures in 3D",
     accent: "#0d6f82",
-    icon: "room",
-    topic: "Food webs in an ecosystem",
+    icon: "cube",
+    topic: "Parts of the light microscope",
     videoUrl: "",
     facts: [
-      { label: "Cost", value: "30-day free trial, then a paid subscription per member" },
-      { label: "Works on", value: "Web browser and desktop app; best on a laptop" },
-      { label: "Students join with", value: "An invitation link, as guests" },
-      { label: "Best lesson stage", value: "Group discussion in online or hybrid lessons" },
+      { label: "Cost", value: "Free plan with a small library; paid plans available" },
+      { label: "Works on", value: "Web browser, Android and iOS" },
+      { label: "Students join with", value: "A link, a QR marker or a class code" },
+      { label: "Best lesson stage", value: "Introducing a structure before practical work" },
     ],
     description: {
       purpose: [
-        "Gather Town, now usually just called Gather, is a platform for meeting in a virtual space. Its purpose is to make online interaction feel more like being in the same room. Each person controls an avatar on a two-dimensional map, and a video call opens automatically between avatars that are standing close together.",
-        "It became popular with schools and universities for online classes and events. The current version is marketed mainly as a virtual office for remote teams, but the same features can be used to run a virtual classroom.",
+        "Assemblr EDU is a platform for teaching with 3D models and augmented reality (AR). Its purpose is to let students see an object from every side instead of as a flat picture in a textbook. It comes from Assemblr, a company based in Indonesia.",
+        "In AR mode the phone camera shows the real classroom with the 3D model placed in it, so a microscope or a heart appears to be standing on the student's desk. Teachers can use ready-made models or build their own projects in a drag-and-drop editor.",
       ],
       features: [
         {
-          name: "Proximity video and audio",
-          detail: "You see and hear the people near your avatar. Walking away ends the conversation, exactly as it would in a real room.",
+          name: "3D library",
+          detail: "A collection of 3D objects for science and other subjects. The free plan includes a limited set, and the full library is on the paid plans.",
         },
         {
-          name: "Customisable space",
-          detail: "Spaces are built from templates and floor plans and can be furnished with a large library of objects across several floors.",
+          name: "Edu Kits and Topics",
+          detail: "Ready-made 3D teaching aids and lesson materials that can be used as they are or as a starting point.",
         },
         {
-          name: "Meeting areas",
-          detail: "Rooms and tables where a group can talk without being overheard by the rest of the space.",
+          name: "Editor",
+          detail: "A drag-and-drop workspace where the teacher places 3D objects and adds annotations, text, images, video or slides. No coding is needed.",
         },
         {
-          name: "Screen sharing and whiteboards",
-          detail: "Any participant can share a screen, and groups can work together on a shared whiteboard.",
+          name: "Annotations",
+          detail: "Labels attached to points on a model. Each label can hold a short explanation that opens when the student selects it.",
         },
         {
-          name: "Chat",
-          detail: "Text chat with people nearby, with individuals or with everyone in the space.",
+          name: "AR view",
+          detail: "Shows the model through the phone camera as if it were in the room. Students can walk around it and move closer to see details.",
         },
         {
-          name: "Roles",
-          detail: "Admin, member and guest roles control who can edit the space and who can only take part.",
+          name: "Sharing by link or QR marker",
+          detail: "A published project can be shared as a link or as a QR marker that students scan with the Assemblr EDU app.",
         },
         {
-          name: "Recordings and notes",
-          detail: "Meetings can be recorded, with AI-generated transcripts and notes.",
+          name: "Classrooms",
+          detail: "A virtual class that students join with a code, where the teacher shares projects and materials.",
         },
       ],
       operation: [
-        "The teacher creates a space, chooses a layout and arranges it into areas, for example a front area for briefing and tables for groups. Students open the invitation link in a browser, allow their camera and microphone, choose an avatar and move around with the arrow keys. The teacher can walk between groups to listen and help, just as in a physical classroom.",
+        "The teacher signs in, creates a new project and adds a 3D object from the library. Labels are added with the annotation tool, the project is previewed and then published. Publishing produces a share link and a QR marker.",
+        "Students open the link in a browser to explore the model in 3D, or scan the marker with the app to see it in AR. They can rotate the model, zoom in and select each label to read about that part.",
       ],
       use: [
-        "Gather is useful when a class cannot be in one room: online lessons, hybrid lessons, evening revision sessions and projects between schools. It is not needed for an ordinary face-to-face lesson.",
+        "Assemblr EDU fits the point in a lesson where students need to understand what something looks like and how its parts are arranged. It is especially useful before practical work, as revision at home, and as a project tool when students build and label a model themselves.",
       ],
     },
     evaluation: {
       strategies: [
-        "Gather supports collaborative strategies that are awkward in a normal video call, such as station rotation, gallery walks, jigsaw groups and open consultation time. Students form and leave groups by moving, so the teacher does not have to manage breakout rooms.",
-        "Most importantly, the teacher stays visible. In a standard video meeting the teacher disappears when groups split up. In Gather, students can see the teacher approaching and can walk over to ask for help.",
+        "Assemblr EDU supports visual and inquiry-based teaching. Instead of being told the parts of a structure, students explore the model and find them. It also suits a flipped approach, because the model can be studied at home through a link before the lesson.",
+        "The editor supports project-based learning. Asking students to build and label their own model is a stronger task than labelling a worksheet, because they have to decide where each label belongs.",
       ],
       engagement: [
-        "Students have a body in the space and choices about where to go and who to talk to. This sense of presence tends to produce more informal talk between students, which is the part of classroom life that online lessons usually lose. Reports from university courses that used Gather describe better interaction than with ordinary video conferencing, although students still preferred being face to face.",
+        "Seeing a model appear on the desk is new for most students and captures attention immediately. More importantly, every student controls the model. They can turn it and look closely at the part they do not understand, which a single diagram on the board cannot offer.",
       ],
       advantages: [
-        "Group work starts naturally, because talking to someone only requires walking up to them.",
-        "The teacher can monitor and support several groups by moving between them.",
-        "The space is persistent, so it can be set up once and reused for a whole project.",
-        "One space can hold a briefing, group work and a presentation session without changing tools.",
-        "Screen sharing and whiteboards cover most group tasks.",
+        "It is free to start, and students need only a phone or a browser.",
+        "No special equipment is required, such as headsets or printed cards.",
+        "Every student can examine the object at once, even when the school has only a few real ones.",
+        "A model cannot be broken, so students can explore freely before handling real apparatus.",
+        "The editor is simple enough for a teacher to make a labelled model in one sitting.",
+        "A shared link lets students revisit the model at home.",
       ],
       limitations: [
-        "Cost is now the biggest barrier. Gather ended its free plan in September 2025. There is a 30-day free trial, after which it charges a monthly fee for each member and counts guest access in hours. Educational institutions may qualify for a discount, but most school teachers could not use it long term without funding.",
-        "It is now designed for workplaces. It has no attendance record, no assessment tools and no content library for schools.",
-        "It needs a laptop and a strong connection, because every nearby participant is a live video stream. It is hard to use on a phone.",
-        "Students can wander off or play with the space instead of working.",
-        "Live video with school-age students raises safeguarding and privacy questions, so the school's permission is needed.",
-        "Building a good space takes time, and both teacher and students need a short orientation.",
+        "The free plan is small. It includes about 400 3D objects and 30 MB of storage, and much of the library and the ready-made materials is reserved for paid plans.",
+        "Much of the ready-made content was made for Indonesian classrooms, so labels may use terms that differ from the Malaysian textbook and need to be edited.",
+        "AR needs a reasonably recent phone, a working camera and a stable internet connection, and it drains the battery quickly.",
+        "Arranging many labels neatly takes time, and labels can overlap when the model is turned.",
+        "A 3D model shows what a structure looks like but cannot teach the skill of using it. It supports practical work and does not replace it.",
+        "The novelty fades, so the activity needs a clear task or students will only play with the model.",
       ],
       impact: [
-        "Gather's impact is on interaction, not directly on content knowledge. In an online or hybrid setting it can restore the peer discussion through which students test and refine their ideas, and that discussion does support understanding. In a face-to-face class it adds nothing that a real room does not already provide.",
+        "The main impact is on spatial understanding. Students form a more accurate picture of a structure and remember where its parts are, which helps them when they meet the real object. In Biology this can make practical lessons run more smoothly, because less time is spent identifying parts and more is spent using them.",
       ],
     },
     guide: {
       access: [
         {
-          title: "Open Gather",
-          detail: "Go to gather.town in a browser on a laptop.",
+          title: "Open Assemblr EDU",
+          detail: "Go to edu.assemblrworld.com in a browser. The editor works best on a computer. Also install the Assemblr EDU app on a phone for the AR view.",
         },
         {
-          title: "Start the free trial",
-          detail: "Sign up with your email address. The trial lasts 30 days and includes every feature.",
+          title: "Create a free account",
+          detail: "Sign up and choose the teacher role.",
         },
         {
-          title: "Create your space",
-          detail: "Name the space, for example \"5 Bestari Biology\", and choose a template with an open area and several tables.",
-        },
-        {
-          title: "Set up your avatar and devices",
-          detail: "Choose an avatar, then allow the browser to use your camera and microphone.",
+          title: "Explore the library",
+          detail: "Search for your topic and check that the model you need is available on the free plan.",
         },
       ],
       create: [
         {
-          title: "Plan the layout",
-          detail: "Decide what each part of the room is for: a briefing area at the front and one station per group.",
+          title: "Start a new project",
+          detail: "From your own page, select Create New Project to open the editor.",
         },
         {
-          title: "Edit the space",
-          detail: "Open the space editor and place a table and a whiteboard at each station. Label each station with its group number or topic.",
+          title: "Add the 3D model",
+          detail: "Find the object in the library, for example a microscope, and place it in the workspace.",
         },
         {
-          title: "Prepare the task",
-          detail: "Write the task instructions in a shared document so you can post the link in the chat during the lesson.",
+          title: "Label the parts",
+          detail: "Use the annotation tool to attach a label to each part. Type the name and add a short description of its function.",
         },
         {
-          title: "Invite the students",
-          detail: "Copy the invitation link and send it to students so they can join as guests.",
+          title: "Tidy and preview",
+          detail: "Move the labels so they do not overlap, then use the preview to turn the model and check it from several angles.",
         },
         {
-          title: "Test it",
-          detail: "Enter the space from a second device to check that the stations and whiteboards work as you expect.",
+          title: "Publish and share",
+          detail: "Select Publish and fill in the project details. In the Share Project panel, copy the link or download the QR marker.",
         },
       ],
       classroom: [
         {
-          title: "Orient the class",
-          detail: "Spend the first five minutes letting students practise moving, muting and finding their station.",
+          title: "Show the marker",
+          detail: "Display the QR marker on the screen or print one copy for each group.",
         },
         {
-          title: "Brief everyone together",
-          detail: "Gather the class at the front area, share your screen and explain the task.",
+          title: "Let students scan",
+          detail: "Students open the Assemblr EDU app, select Scan and point the camera at the marker. The model appears in AR.",
         },
         {
-          title: "Send groups to their stations",
-          detail: "Groups walk to their tables and work on the whiteboard. Move between stations to listen and ask questions.",
+          title: "Give a task",
+          detail: "Set a clear task, such as finding the part that changes the magnification, so that students explore with a purpose.",
         },
         {
-          title: "Run the gallery walk",
-          detail: "Half of each group stays to present while the other half visits the other stations, then they swap.",
+          title: "Connect it to the real object",
+          detail: "Move from the model to the real apparatus and ask students to find the same parts on it.",
+        },
+      ],
+    },
+    showcase: {
+      title: "The model I made",
+      intro: "I chose the light microscope and labelled its parts in the Assemblr editor. These screenshots show the finished model from two angles.",
+      images: [
+        {
+          src: "/assemblr/microscope-front.jpg",
+          alt: "A 3D model of a light microscope seen from the front, with eleven labelled parts.",
+          caption: "The labelled microscope from the front.",
+          width: 1173,
+          height: 650,
         },
         {
-          title: "Bring everyone back",
-          detail: "Return to the front area for a summary and set the follow-up task.",
+          src: "/assemblr/microscope-side.jpg",
+          alt: "The same 3D microscope model turned to show the back and the adjustment knobs.",
+          caption: "Turning the model shows the knobs at the back.",
+          width: 1212,
+          height: 676,
         },
       ],
     },
     analysis: {
       why: [
-        "Understanding in Biology grows when students explain ideas to each other. Topics such as ecosystems involve many interacting factors, and students need to talk through cause and effect to make sense of them. Scientists also share their work in exactly this way, at poster sessions where people walk from one display to the next.",
-        "Gather suits these discussion-heavy topics whenever the class is not physically together. It lets me keep group practical write-ups, gallery walks and revision clinics going online, with the same movement between groups that I would use in a laboratory.",
+        "Biology is a subject of structures. Students must know what a cell, an organ or a piece of apparatus looks like and how its parts relate to each other. A textbook can only show one flat view, and students often struggle to connect that drawing with the real thing.",
+        "Assemblr EDU suits Biology because it closes that gap. I chose the microscope because it is one of the most important tools in a Biology laboratory, and students must know its parts before they can use it. Most schools do not have a microscope for every student, so a 3D model gives each of them time with the instrument before the practical begins.",
       ],
       lesson: {
-        title: "Virtual gallery walk on food webs",
-        level: "Form 5, Ecosystem",
-        duration: "60 minutes, online",
-        objective: "Students construct a food web for a Malaysian ecosystem and predict the effect of removing one organism.",
+        title: "Getting to know the light microscope",
+        level: "Form 4, Cell biology and organisation",
+        duration: "60 minutes",
+        objective: "Students identify the main parts of a light microscope, state the function of each and use the microscope to focus a prepared slide.",
         flow: [
           {
-            phase: "Orientation",
+            phase: "Starter",
             time: "5 min",
-            detail: "Students join the space, test their audio and walk to their group's station.",
+            detail: "I show a real microscope and ask the class which parts they can already name.",
           },
           {
-            phase: "Briefing",
-            time: "10 min",
-            detail: "At the front area I revise producers, consumers and decomposers and give each group an ecosystem: mangrove swamp, tropical rainforest, paddy field or coral reef.",
-          },
-          {
-            phase: "Group work",
-            time: "20 min",
-            detail: "Each group draws a food web for its ecosystem on the station whiteboard. I move between stations and question their choices.",
-          },
-          {
-            phase: "Gallery walk",
+            phase: "Explore",
             time: "15 min",
-            detail: "Presenters stay while visitors rotate. At each station visitors ask: what happens if one named organism disappears?",
+            detail: "In pairs, students scan the marker and study the microscope in AR on their desk. They turn the model and open each label to read its function.",
           },
           {
-            phase: "Plenary",
+            phase: "Record",
             time: "10 min",
-            detail: "Back together, we compare the four food webs and identify what they have in common.",
+            detail: "Students complete a table of parts and functions, and answer: which parts would you adjust to make a blurred image sharp?",
+          },
+          {
+            phase: "Hands-on",
+            time: "20 min",
+            detail: "Groups move to the real microscopes, point to each part they found on the model and focus a prepared slide at low power.",
+          },
+          {
+            phase: "Check",
+            time: "10 min",
+            detail: "I point to parts of the real microscope and students name them and give the function without looking at the model.",
           },
         ],
       },
       concepts: [
         {
-          name: "Social constructivism",
+          name: "Pre-training principle",
           detail:
-            "Vygotsky argued that learning happens first through interaction with others. Peers can support each other within the zone of proximal development, between what a student can do alone and what they can do with help.",
+            "In Mayer's theory of multimedia learning, people learn a complex task better when they already know the names and features of its main parts. Learning the parts on a model first prepares students to use the real microscope.",
         },
         {
-          name: "Social presence",
-          detail: "In the Community of Inquiry model, online learning works better when students feel that the other people are real and present. Avatars and proximity video are designed to create that feeling.",
+          name: "Spatial contiguity",
+          detail: "Learning improves when words are placed next to the part of the picture they describe. Annotations do this by attaching each label directly to its part.",
         },
         {
-          name: "Gallery walk",
-          detail: "A cooperative strategy in which groups display their work and move around to study and question the work of others.",
+          name: "Constructivism",
+          detail: "Students build understanding by exploring and handling an object themselves instead of receiving a description of it.",
         },
       ],
       reflection: [
-        "I chose Gather because the idea behind it is valuable, but my evaluation is mixed. With no free plan, I cannot recommend it as an everyday tool for a Malaysian school teacher. I would use the trial period for one well-planned online project, or use it where a school or programme already pays for it.",
-        "The more lasting lesson is about design, not about this product. The gallery walk above works because students have a reason to move and something to ask at each station. That structure can be carried into a real classroom or into any other virtual space platform.",
+        "I chose the microscope because it is one of the most important tools used in Biology laboratories. It was easy to explore the 3D model and label the different parts, although arranging the labels neatly took some time.",
+        "The AR feature made the microscope look realistic and helped me visualise its structure better. I would use Assemblr EDU in my Biology class because it makes learning laboratory equipment more interactive, engaging and easier for students to understand.",
       ],
     },
     sources: [
-      { label: "Gather official site", url: "https://www.gather.town/" },
-      { label: "Gather pricing", url: "https://www.gather.town/pricing" },
-      { label: "Gather support: discounts", url: "https://support.gather.town/articles/2244523252-discounts-and-sponsorships" },
+      { label: "Assemblr EDU official site", url: "https://edu.assemblrworld.com/" },
+      { label: "Assemblr EDU plans", url: "https://about.edu.assemblrworld.com/plans" },
+      { label: "Assemblr guide: sharing AR markers", url: "https://guide.assemblrworld.com/share-projects/share-ar-markers" },
     ],
   },
 ];
@@ -1151,11 +1214,11 @@ export const conclusion = {
       watch: "The game can distract from the questions",
     },
     {
-      slug: "gather-town",
-      role: "Keeps group discussion alive in online lessons",
-      level: "Explaining and analysing with peers",
-      cost: "Paid after a 30-day trial",
-      watch: "Cost, devices and bandwidth",
+      slug: "assemblr-edu",
+      role: "Lets every student see and explore a structure in 3D",
+      level: "Understanding structure and spatial relationships",
+      cost: "Free with a small library",
+      watch: "Few free models, and labels may not match the textbook",
     },
   ],
   learned: [
@@ -1167,7 +1230,7 @@ export const conclusion = {
     {
       title: "Most tools stop at recall",
       detail:
-        "Four of the five platforms are strongest at lower-order thinking. In every lesson I planned, the higher-order task, such as explaining or predicting, had to be added by me after the digital activity.",
+        "Most of these platforms are strongest at lower-order thinking. In every lesson I planned, the higher-order task, such as explaining or predicting, had to be added by me after the digital activity.",
     },
     {
       title: "The debrief is where learning happens",
@@ -1176,7 +1239,7 @@ export const conclusion = {
     {
       title: "Free plans have real costs",
       detail:
-        "Advertisements, public content, capped features and, in one case, no free plan at all are part of an honest evaluation. A teacher has to check these limits before building lessons around a platform.",
+        "Advertisements, public content, capped features and small free libraries are part of an honest evaluation. A teacher has to check these limits before building lessons around a platform.",
     },
     {
       title: "Access is not equal",
@@ -1184,7 +1247,7 @@ export const conclusion = {
     },
   ],
   closing: [
-    "As a future Biology teacher, I will not judge a digital platform by how impressive it looks. I will ask what it lets my students do that they could not do as well without it. Used with that question in mind, these five tools can make a Biology classroom safer, more active and more talkative, and the teacher's planning is still what turns that activity into understanding.",
+    "As a future Biology teacher, I will not judge a digital platform by how impressive it looks. I will ask what it lets my students do that they could not do as well without it. Used with that question in mind, these five tools can make a Biology classroom safer, more active and more visual, and the teacher's planning is still what turns that activity into understanding.",
   ],
 };
 

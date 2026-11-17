@@ -57,6 +57,27 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <section className="section section-tint">
+        <div className="wrap">
+          <h2 className="h-section">My education</h2>
+          <ol className="edu">
+            {site.education.map((item) => (
+              <li key={item.place}>
+                <div className="edu-photo">
+                  <Image src={item.image} alt={item.alt} width={item.width} height={item.height} sizes="(max-width: 760px) 100vw, 22rem" />
+                </div>
+                <div className="edu-text">
+                  <p className="edu-years">{item.years}</p>
+                  <h3>{item.place}</h3>
+                  <p className="edu-stage">{item.stage}</p>
+                  <p>{item.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
     </>
   );
 }

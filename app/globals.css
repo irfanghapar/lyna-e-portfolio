@@ -611,6 +611,7 @@ a:hover {
 
 .about-photo img {
   object-fit: cover;
+  object-position: 50% 40%;
 }
 
 .about-photo-empty {
@@ -663,6 +664,64 @@ a:hover {
 .about-facts dt {
   font-weight: 700;
   color: var(--pink-700);
+}
+
+.edu {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.edu li {
+  display: grid;
+  grid-template-columns: 22rem minmax(0, 1fr);
+  gap: clamp(1.2rem, 3vw, 2.5rem);
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  border: 2px solid var(--pink-200);
+  border-radius: 1.4rem;
+}
+
+.edu-photo {
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  border-radius: 0.9rem;
+  background: var(--pink-100);
+}
+
+.edu-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edu-text {
+  padding: 0.4rem 1rem 0.6rem 0;
+}
+
+.edu-years {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--pink-700);
+}
+
+.edu-text h3 {
+  margin-top: 0.1rem;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.edu-stage {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.edu-stage + p {
+  max-width: 40rem;
+  margin-top: 0.6rem;
 }
 
 /* Running text */
@@ -974,6 +1033,42 @@ a:hover {
 
 .steps span {
   line-height: 1.55;
+}
+
+.showcase {
+  margin-top: 2.6rem;
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--accent) 7%, #fff);
+  border-radius: var(--radius);
+}
+
+.part .showcase h3 {
+  margin: 0 0 0.4rem;
+}
+
+.showcase-grid {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.showcase figure {
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid color-mix(in srgb, var(--accent) 30%, #fff);
+  border-radius: 0.9rem;
+}
+
+.showcase img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.showcase figcaption {
+  padding: 0.6rem 1rem 0.7rem;
+  font-size: 1rem;
+  color: var(--ink-soft);
 }
 
 .lesson {
@@ -1369,6 +1464,19 @@ a:hover {
 
   .about-photo {
     width: min(70vw, 16rem);
+  }
+
+  .edu li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.8rem;
+  }
+
+  .edu-text {
+    padding: 0 0.4rem 0.4rem;
+  }
+
+  .showcase {
+    padding: 1.1rem;
   }
 
   .about-facts div {

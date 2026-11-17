@@ -1,6 +1,6 @@
 # lyna-e-portfolio
 
-Norazlyna's e-portfolio for EDU456 (Innovative Technologies for Teaching and Learning), class ED247, UiTM Puncak Alam. Five digital platforms for teaching Biology: ClassDojo, Quizlet, Educaplay, ZEP Quiz and Gather Town.
+Norazlyna's e-portfolio for EDU456 (Innovative Technologies for Teaching and Learning), class ED247, UiTM Puncak Alam. Five digital platforms for teaching Biology: ClassDojo, Quizlet, Educaplay, ZEP Quiz and Assemblr EDU.
 
 Built with Next.js. Deploys on Vercel with the default settings.
 

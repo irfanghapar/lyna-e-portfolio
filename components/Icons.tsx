@@ -43,14 +43,12 @@ export function EntryIcon({ icon }: { icon: Entry["icon"] }) {
           <circle cx="48" cy="27" r="4" fill="currentColor" stroke="none" />
         </svg>
       );
-    case "room":
+    case "cube":
       return (
         <svg {...common}>
-          <rect x="8" y="12" width="48" height="40" rx="5" />
-          <circle cx="23" cy="29" r="5" />
-          <circle cx="41" cy="29" r="5" />
-          <path d="M15 44c1-5 4-7 8-7s7 2 8 7M33 44c1-5 4-7 8-7s7 2 8 7" />
-          <path d="M29 22h6" strokeDasharray="1 5" />
+          <path d="M32 8l20 11v24L32 54 12 43V19z" />
+          <path d="M12 19l20 11 20-11M32 30v24" />
+          <circle cx="32" cy="19" r="2.5" fill="currentColor" stroke="none" />
         </svg>
       );
   }

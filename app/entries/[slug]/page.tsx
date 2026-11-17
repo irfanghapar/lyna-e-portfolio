@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
@@ -56,7 +57,7 @@ export default async function EntryPage({ params }: PageProps<"/entries/[slug]">
   const index = entries.indexOf(entry);
   const previous = entries[index - 1];
   const next = entries[index + 1];
-  const { description, evaluation, guide, analysis } = entry;
+  const { description, evaluation, guide, analysis, showcase } = entry;
 
   return (
     <article className="entry" style={{ "--accent": entry.accent } as CSSProperties}>
@@ -163,6 +164,26 @@ export default async function EntryPage({ params }: PageProps<"/entries/[slug]">
               <Steps items={guide.create} />
               <h3>Use it in the lesson</h3>
               <Steps items={guide.classroom} />
+              {showcase ? (
+                <div className="showcase">
+                  <h3>{showcase.title}</h3>
+                  <p>{showcase.intro}</p>
+                  <div className="showcase-grid">
+                    {showcase.images.map((image) => (
+                      <figure key={image.src}>
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          width={image.width}
+                          height={image.height}
+                          sizes="(max-width: 760px) 100vw, 46rem"
+                        />
+                        <figcaption>{image.caption}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </section>
 
             <section id="analysis" className="part">
